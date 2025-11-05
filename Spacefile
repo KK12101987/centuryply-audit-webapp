@@ -1,0 +1,3 @@
+name: centuryply-audit-report
+entrypoint: main.py
+python_version: "3.10"
