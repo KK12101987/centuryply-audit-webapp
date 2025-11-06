@@ -11,7 +11,7 @@ os.makedirs(app.config['REPORT_FOLDER'], exist_ok=True)
 
 @app.route('/')
 def index():
-    return render_template('upload.html')
+    return render_template('index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -33,7 +33,7 @@ def upload_file():
 @app.route('/reports')
 def reports():
     files = os.listdir(app.config['REPORT_FOLDER'])
-    return render_template('index.html', files=files)
+    return render_template('reports.html', files=files)
 
 if __name__ == "__main__":
     app.run(debug=True)
