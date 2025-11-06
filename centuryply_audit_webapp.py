@@ -33,7 +33,9 @@ def upload_file():
 @app.route('/reports')
 def reports():
     files = os.listdir(app.config['REPORT_FOLDER'])
-    return render_template('reports.html', files=files)
+    return render_template('index.html', files=files)
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
